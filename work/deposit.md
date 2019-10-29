@@ -1,3 +1,4 @@
+### 1 wallet-deposit
 #### 1 实现rpc.go接口
 ```
 NextBlock(handleRollback HandleRollbackBlock) (*Block, error)
@@ -45,3 +46,8 @@ if isWork {
 2.4.3 日志记录，对于error，非最外层加上简易说明，或者可以直接返回上层，在最外层一定要记得log输出；
 info，和debug根据需要直接输出即可；
 2.4.4 抽取共用代码段，杜绝代码冗余；
+#### 2 handler
+
+### 2 wallet-deposit-sandbox-config
+#### 2.1 增加币种的配置文件
+#### 2.2 增加nodeapi的配置
