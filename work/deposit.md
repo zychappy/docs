@@ -1,11 +1,6 @@
 ### 1 wallet-deposit
 #### 1 实现rpc.go接口
-```
-NextBlock(handleRollback HandleRollbackBlock) (*Block, error)
-	GetTxs(hashes []string) ([]*models.Tx, error)
-	GetTxConfirmations(hash string) (uint64, error)
-	ReuseAddress() bool
-```
+
 ##### 1.1 NextBlock
 该方法的主要作用是同步区块链高度，保存当前已检测的最新高度，检查每个区块下，是否有转账到自己地址的交易，
 如果有，保存该交易的交易信息，包括金额，交易hash等；
@@ -47,8 +42,10 @@ if isWork {
 info，和debug根据需要直接输出即可；
 2.4.4 抽取共用代码段，杜绝代码冗余；
 2.4.5 空指针！！！要在不为空的情况下才进行相关操作
-#### 2 handler
-
-### 2 wallet-deposit-sandbox-config
+#### 3 handler
+### 2 config
 #### 2.1 增加币种的配置文件
 #### 2.2 增加nodeapi的配置
+### 3 tools
+3.1 增加公私钥地址生成，如与其他币；  
+3.2 如果是私钥相同，地址不同，重写一个地址生成，私钥方式共用；
