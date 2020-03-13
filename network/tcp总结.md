@@ -12,7 +12,7 @@ TCP（Transmission Control Protocol，传输控制协议）提供的是面向连
 使用滑动窗口，就可以一次发送多条数据，从而就提高了性能
 - 什么是拥塞控制  
 防止发送方发的太快，使得网络来不及处理，从而导致网络拥塞。  
-拥塞控制使用的机制：AIMD\slow start
+拥塞控制使用的机制：AIMD\slow start  
 slow start: 慢启动
 A: additive（加法的）
 I: increase（增加）
@@ -21,3 +21,7 @@ D: decrease（减少）
 即就是加法增加，乘法减少---->加增乘减
 因特网建议标准RFC2581定义了进行拥塞控制的四种算法，
 即慢开始（Slow-start)、拥塞避免（Congestion Avoidance)、快重传（Fast Restrangsmit)和快回复（Fast Recovery）。
+
+- Address already in use产生的原因和解决方法  
+你只要记住一句话，在所有 TCP 服务器程序中，调用 bind 之前请设置 SO_REUSEADDR 套接字选项。
+这不会产生危害，相反，它会帮助我们在很快时间内重启服务端程序，而这一点恰恰是很多场景所需要的。
