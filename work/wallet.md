@@ -105,18 +105,25 @@
 代码不骗人，所以不要自欺欺人。
 
 ## 主要组件
-| 名称          | 版本   | 描述                              |  
-|-------------|------|---------------------------------|  
-| jdk         | 17   | 最新稳定版本是21，考虑到某些组件的兼容性问题，使用上个稳定版 |
-| springboot  |      | spring全家桶                       |
-| dubbo       |      | rpc框架                           |
-| nacos       |      | 配置与注册中心                         |
-| rocketmq    |      | 消息中间件                           |
-| redis       |      | 缓存中间件                           |
-| xxljob      |      | 定时任务中间件                         |
-| kibana      |      | 日志可视化                           |
-| yearning    |      | 数据库可视化管理                        |
-| lombok      |      | 常用工具                            |
-| hutu        |      | 常用工具                            |
-| mybatisplus |      | ORM                             |
+以下是截止20240331，验证通过的最新的组件版本，特别是dubbo和nacos，官网的文档是
+有问题，另外nacos的客户端版本要与服务端版本一致，否则会出现版本不兼容的情况。
+nacos-client 的版本是在spring-cloud-starter-alibaba-nacos-config，
+以nacos2.3.1为例，如果springcloudalibaba 是2022.x，则会出现版本不兼容的情况。
+
+| 名称                 | 版本    | 描述                              |  
+|--------------------|-------|---------------------------------|  
+| jdk                | 17    | 最新稳定版本是21，考虑到某些组件的兼容性问题，使用上个稳定版 |
+| springboot         |3.0.5   | spring全家桶                       |
+| springcloud        |2022.0.2       | springcloud                     |
+| dubbo              |3.2.0-beta.6    | rpc框架                           |
+| nacos              | 2.3.1 | 配置与注册中心                         |
+| springcloudalibaba | 2023.0.0.0-RC1 |                          |
+| rocketmq           |       | 消息中间件                           |
+| redis              |       | 缓存中间件                           |
+| xxljob             |       | 定时任务中间件                         |
+| kibana             |       | 日志可视化                           |
+| yearning           |       | 数据库可视化管理                        |
+| lombok             |       | 常用工具                            |
+| hutu               |       | 常用工具                            |
+| mybatisplus        |       | ORM                             |
 
